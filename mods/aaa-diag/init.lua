@@ -2,7 +2,7 @@
 
 minetest.register_on_mods_loaded(function()
 	S = function()
-		minetest.log('error','Global S() called')
+		minetest.log('error','Global S() called\n'..debug.traceback())
 		return 'S() needed'
 	end
 end)
